@@ -8,6 +8,7 @@ import{ ExpenseItems } from './ExpenseItems';
 
 import { Container } from 'react-bootstrap';
 import { ExpenseCreator } from "./ExpenseCreator";
+import { PendingExpenseByPayees } from "./PendingExpenseByPayee";
 
 
 const Home = () => {
@@ -37,7 +38,7 @@ const Home = () => {
         <div>
            {<ExpenseItems expenseItems={expenseItems}></ExpenseItems>}
           
-           
+           {<PendingExpenseByPayees expenseItems={expenseItems}></PendingExpenseByPayees>}
         </div>
         </Container>
     )

@@ -100,14 +100,18 @@ const ExpenseCreator = ({ expenseItems }) => {
           <Form.Label>
             Price<span style={{ color: "red" }}>*</span>
           </Form.Label>
-          <Form.Control type="number" placeholder="Enter price" ref={priceRef}/>
+          <Form.Control
+            type="number"
+            placeholder="Enter price"
+            ref={priceRef}
+          />
         </Form.Group>
 
         <Form.Group className="mb-3" controlId="date">
           <Form.Label>
             Date<span style={{ color: "red" }}>*</span>
           </Form.Label>
-          <Form.Control type="date" ref={expenseDateRef}/>
+          <Form.Control type="date" ref={expenseDateRef} />
         </Form.Group>
 
         <Button variant="primary" type="submit">
