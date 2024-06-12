@@ -30,4 +30,17 @@ const newExpenseItem = async (newExpenseItem) => {
     return response.data;
 }
 
-export {getAllExpenseItems};
+const getAllPayeeNames = (expenseItems) => {
+    const uniquePayeeNames = [];
+  
+    expenseItems.forEach((expenseItem) => {
+      let payeeName = expenseItem.payeeName;
+      if (!uniquePayeeNames.includes(payeeName)) {
+        uniquePayeeNames.push(payeeName);
+      }
+    });
+    return uniquePayeeNames;
+  };
+
+
+export {getAllExpenseItems, getAllPayeeNames, newExpenseItem};
