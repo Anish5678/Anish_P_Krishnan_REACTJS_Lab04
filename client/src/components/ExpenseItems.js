@@ -8,7 +8,7 @@ const ExpenseItems = ({expenseItems}) => {
   function expenseItemsTable() {
     return (
       <Table striped bordered hover>
-        <thead>
+        <thead class="table-dark">
           <tr>
             <th>#</th>
             <th>Date</th>
@@ -23,11 +23,11 @@ const ExpenseItems = ({expenseItems}) => {
               return (
 
                 <tr key ={index}>
-                  <td>{index + 1}</td>
-                  <td>{expenseItem.date}</td>
-                  <td>{expenseItem.expenseDescription}</td>
-                  <td>{expenseItem.price}</td>
-                  <td>{expenseItem.payeeName}</td>
+                  <td class="bg-secondary bg-opacity-50">{index + 1}</td>
+                  <td class="bg-warning">{expenseItem.date}</td>
+                  <td class="bg-info">{expenseItem.expenseDescription}</td>
+                  <td class="bg-danger">{expenseItem.price}</td>
+                  <td class="bg-success bg-opacity-75">{expenseItem.payeeName}</td>
                   
                   
                 </tr>

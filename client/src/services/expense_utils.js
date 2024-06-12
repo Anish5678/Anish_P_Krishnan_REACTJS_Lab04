@@ -7,7 +7,7 @@ const getAllExpenseItems = async () => {
 
   const response = await axios.get(getItemsUrl);
   return response.data;
-};
+}
 
 const newExpenseItem = async (newExpenseItem) => {
   const postItemUrl = "http://localhost:4000/expenses";

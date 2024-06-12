@@ -9,7 +9,9 @@ import{ ExpenseItems } from './ExpenseItems';
 import { Container } from 'react-bootstrap';
 import { ExpenseCreator } from "./ExpenseCreator";
 import { PendingExpenseByPayees } from "./PendingExpenseByPayee";
+import "../index.css";
 
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Home = () => {
 
@@ -32,12 +34,14 @@ const Home = () => {
       }, [])
   
         return (
+            
         <Container>
+            
              {<ExpenseCreator expenseItems={expenseItems}></ExpenseCreator>}
-        <h2>Expense Items</h2>
+        <h5>Expense Items</h5>
         <div>
            {<ExpenseItems expenseItems={expenseItems}></ExpenseItems>}
-          
+          <br></br>
            {<PendingExpenseByPayees expenseItems={expenseItems}></PendingExpenseByPayees>}
         </div>
         </Container>

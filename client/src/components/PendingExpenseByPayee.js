@@ -33,7 +33,7 @@ import {getAllPayeeNames, getTotalExpenseByPayee, getGrandTotalExpenses} from ".
       return (
   
         <Table striped bordered hover>
-          <thead>
+          <thead class="table-dark">
             <tr>
               <th>#</th>
               <th>Payee</th>
@@ -45,19 +45,19 @@ import {getAllPayeeNames, getTotalExpenseByPayee, getGrandTotalExpenses} from ".
             {
               payeeNames.map((payeeName, index) => (
                 <tr key={index + 1}>
-                  <td>{index + 1}</td>
-                  <td>{payeeName}</td>
-                  <td>{getTotalExpenseByPayee(expenseItems, payeeName)}</td>
-                  <td>{getPendingAmount(payeeName)}</td>
+                  <td class="bg-secondary bg-opacity-50">{index + 1}</td>
+                  <td class="bg-info bg-opacity-75">{payeeName}</td>
+                  <td class="bg-danger bg-opacity-50">{getTotalExpenseByPayee(expenseItems, payeeName)}</td>
+                  <td class="bg-danger bg-opacity-75">{getPendingAmount(payeeName)}</td>
                 </tr>
               ))
             }
   
   
             <tr>
-              <td></td>
-              <td>Grand Total</td>
-              <td>{getGrandTotalExpenses(expenseItems)}</td>
+              <td class="bg-secondary bg-opacity-50"></td>
+              <td class="bg-info">Grand Total</td>
+              <td class="bg-success bg-opacity-75">{getGrandTotalExpenses(expenseItems)}</td>
               <td></td>
             </tr>
   
@@ -69,8 +69,8 @@ import {getAllPayeeNames, getTotalExpenseByPayee, getGrandTotalExpenses} from ".
     }
   
     return (<div>
-  
-      <h2>Pending Expenses By Payee</h2>
+   <h5>Pending Expenses By Payee</h5> 
+      
       {
         displayTable()
       }

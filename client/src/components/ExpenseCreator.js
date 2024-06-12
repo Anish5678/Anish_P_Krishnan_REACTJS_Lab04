@@ -53,10 +53,13 @@ const ExpenseCreator = ({ expenseItems }) => {
         <Button variant="primary" onClick={handleShow} className="float-end">
           Add New Expense
         </Button>{" "}
-        <br></br>
+        <br></br><br></br>
         <Modal show={show} onHide={handleClose}>
-          <Modal.Header closeButton>
-            <Modal.Title>Add Expense</Modal.Title>
+          <Modal.Header closeButton style={{ background: "#dce995" }}>
+            <Modal.Title style={{ textAlign:"center" }}>Add New Expense
+            <h6 style={{textAlign:"left", color:"red"}}>Read the below instructions before proceeding:</h6>
+           <h6>Make sure you fill all the fields where * is provided</h6>
+            </Modal.Title>
           </Modal.Header>
 
           <Modal.Body>{createExpenseForm()}</Modal.Body>
@@ -113,13 +116,14 @@ const ExpenseCreator = ({ expenseItems }) => {
           </Form.Label>
           <Form.Control type="date" ref={expenseDateRef} />
         </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
-        <Button variant="secondary" onClick={handleClose}>
+        
+        <Button variant="secondary" onClick={handleClose} className="float-end">
           Close
         </Button>
+        <Button variant="primary" type="submit" className="float-end">
+          Submit
+        </Button>
+        
       </Form>
     );
   }
