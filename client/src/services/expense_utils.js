@@ -18,4 +18,16 @@ const getAllExpenseItems = async () => {
 
 }
 
+const newExpenseItem = async (newExpenseItem) => {
+
+    const postItemUrl = "http://localhost:4000/expenses";
+
+    const response = await axios.post(postItemUrl, newExpenseItem, {
+        headers : {
+            'Content-Type' : 'application/json'
+        }
+    })
+    return response.data;
+}
+
 export {getAllExpenseItems};

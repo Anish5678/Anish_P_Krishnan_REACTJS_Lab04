@@ -30,7 +30,7 @@ const ExpenseCreator = () => {
 
   function createExpenseForm() {
     return (
-      <Form>
+      <Form >
         <Form.Group className="mb-3" controlId="payeeName">
           <Form.Label>
             Name<span style={{ color: "red" }}>*</span>
