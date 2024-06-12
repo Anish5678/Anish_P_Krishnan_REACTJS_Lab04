@@ -7,6 +7,9 @@ import { useState } from 'react';
 import{ ExpenseItems } from './ExpenseItems';
 
 import { Container } from 'react-bootstrap';
+import { ExpenseCreator } from "./ExpenseCreator";
+
+
 const Home = () => {
 
     const [expenseItems, setExpenseItems] = useState([]);
@@ -29,12 +32,11 @@ const Home = () => {
   
         return (
         <Container>
+             {<ExpenseCreator></ExpenseCreator>}
         <h2>Expense Items</h2>
         <div>
-           {
-            <ExpenseItems expenseItems={expenseItems}></ExpenseItems>
-           }
-              
+           {<ExpenseItems expenseItems={expenseItems}></ExpenseItems>}
+          
            
         </div>
         </Container>
